@@ -1,6 +1,10 @@
 import * as React from 'react'
 
-class AddItem extends React.Component<any, {}> {
+interface IProps {
+    onPictures: Function
+}
+
+class AddItem extends React.PureComponent<IProps, {}> {
     private fileInput: any
 
     constructor(props: any) {
@@ -14,7 +18,7 @@ class AddItem extends React.Component<any, {}> {
     }
 
     uploadImage = () => {
-        const pictures: any[] = this.fileInput.current.files
+        const pictures: File[] = this.fileInput.current.files
         if (pictures.length > 0) {
             this.props.onPictures(pictures[0])
         }

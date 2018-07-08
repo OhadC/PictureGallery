@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-const GalleryItem = (props: any) => {
+const GalleryItem = (props: {picture: string}) => {
     return (
         <div className="item">
             <img src={props.picture} />
