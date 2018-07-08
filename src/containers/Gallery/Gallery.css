@@ -1,0 +1,29 @@
+.gallery-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+}
+
+.gallery-container .item, .gallery-container .add-item {
+    border-radius: 0.5rem
+}
+
+.gallery-container .add-item {
+    font-size: 5rem;
+    color: white;
+    background-color: darkgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-container .add-item input[type=file] {
+    display: none;
+}
+
+.gallery-container .item img {
+    max-width: 100%;
+    max-height: auto;
+    border-radius: 0.5rem
+}
